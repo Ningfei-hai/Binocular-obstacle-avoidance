@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 ,   , LIC=Q7GVE-5SGQ1-GQX0H-WV7DQ-GZ9P8-8WWF5
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.15.0
+Toolchain Path:  D:\keil5\setup\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DCM.DLL V1.13.2.0
+Target DLL:      CMSIS_AGDI.dll V1.21.12.0
+Dialog DLL:      TCM.DLL V1.14.5.0
+ 
+<h2>Project:</h2>
+E:\AUV\双目避障AUV设计方案\双目避障控制程序时间片轮询\Project\RVMDK（uv5）\ISO-STM32.uvprojx
+Project File Date:  03/04/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'D:\keil5\setup\ARM\ARMCC\Bin'
+Build target '单任务'
+compiling main.c...
+compiling timer.c...
+compiling control.c...
+..\..\HARDWARE\CONTROL\control.c(47): error:  #20: identifier "uwTick" is undefined
+        int64_t total_begin_tick = 
+ysTick->VAL - uwTick*(SysTick->LOAD+1);    // 思路同???? begin_tick
+..\..\HARDWARE\CONTROL\control.c(49): error:  #254: type name is not allowed
+        for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(49): error:  #65: expected a ";"
+        for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(49): error:  #20: identifier "i" is undefined
+        for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(55): error:  #268: declaration may not appear after executable statement in block
+                        int64_t begin_tick        = SysTick->VAL - uwTick*(SysTick->LOAD+1);
+..\..\HARDWARE\CONTROL\control.c(90): error:  #254: type name is not allowed
+        for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(90): error:  #65: expected a ";"
+        for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(90): error:  #20: identifier "i" is undefined
+        for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(103): error:  #20: identifier "uwTick" is undefined
+                        task_structs[i].interval_time<=(uwTick-task_structs[i].last_time))
+..\..\HARDWARE\CONTROL\control.c(110): error:  #20: identifier "uwTick" is undefined
+        if(uwTick%1000 == 0)    // 每??1000ms????一?? total_usage_tick_max_in1s ?? total_usage_time_max_in1s
+..\..\HARDWARE\CONTROL\control.c(159): error:  #254: type name is not allowed
+                for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(159): error:  #65: expected a ";"
+                for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c(159): error:  #20: identifier "i" is undefined
+                for(uint8_t i=0;i<TASK_NUMBER;i++)
+..\..\HARDWARE\CONTROL\control.c: 0 warnings, 13 errors
+compiling timetask.c...
+..\..\HARDWARE\TASK\timetask.c(19): error:  #29: expected an expression
+        for(int i=0;i<1000000;i++) 
+..\..\HARDWARE\TASK\timetask.c(19): error:  #20: identifier "i" is undefined
+        for(int i=0;i<1000000;i++) 
+..\..\HARDWARE\TASK\timetask.c(26): error:  #20: identifier "TASK1" is undefined
+        System_TaskOut(TASK1,4000);
+..\..\HARDWARE\TASK\timetask.c: 0 warnings, 3 errors
+".\Objects\ISO-STM32.axf" - 16 Error(s), 0 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\AUV\双目避障AUV设计方案\双目避障控制程序时间片轮询\Project\RVMDK（uv5）\RTE
+  D:\keil5\setup\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>
